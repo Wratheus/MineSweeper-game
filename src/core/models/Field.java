@@ -16,20 +16,20 @@ public class Field {
     public static Field fieldFactory(GameDifficulty difValue) {
         Field field;
         switch (difValue) {
-            default: { // INTERMEDIATE
-                field = new Field(new Coord(16, 16), 40, 35);
-                break;
-            }
             case BEGINNER: {
                 field = new Field(new Coord(9, 9), 10, 45);
                 break;
             }
             case EXPERT: {
-                field = new Field(new Coord(30, 16),99, 30);
+                field = new Field(new Coord(30, 16), 99, 30);
                 break;
             }
             case INTERMEDIATE: {
                 field = new Field(new Coord(16, 16), 40, 30);
+                break;
+            }
+            default: { // INTERMEDIATE
+                field = new Field(new Coord(16, 16), 40, 35);
                 break;
             }
         }
